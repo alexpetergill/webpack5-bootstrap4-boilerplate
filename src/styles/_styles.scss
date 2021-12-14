@@ -1,0 +1,14 @@
+html,
+body {
+  height: 100%;
+}
+
+.row > [class*="col-"],
+.row > .col {
+  margin-bottom: 0.9375rem;
+  margin-top: 0.9375rem;
+}
+
+.fas {
+  font-size: 4rem;
+}
