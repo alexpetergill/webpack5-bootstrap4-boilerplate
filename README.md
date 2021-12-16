@@ -1,6 +1,6 @@
 # Webpack 5 & Bootstrap 4 Boilerplate
 
-Bootstrap 4 + SCSS + Babel + jQuery + Fontawesome with dev server and an optimized production build.
+Webpack + Bootstrap 4 + SCSS + Babel + jQuery + Fontawesome with dev server and an optimized production build.
 
 ## Prerequisites
 Your node version needs a minimum of 12.20.
@@ -17,6 +17,7 @@ npm install
 ```
 
 ## Usage
+==NOTE: The development server will not work out-the-box inside a container. Use the build script instead.==
 
 ### Development server
 

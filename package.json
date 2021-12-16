@@ -1,7 +1,7 @@
 {
   "name": "webpack5-bootstrap4-boilerplate",
-  "version": "1.0.2",
-  "description": "Bootstrap 4 + SCSS + Babel + jQuery + Fontawesome",
+  "version": "1.0.3",
+  "description": "Bootstrap 4 + SCSS + Babel + Linting + jQuery + Fontawsome with Webpack",
   "main": "index.js",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
@@ -12,11 +12,6 @@
     "lint:scripts": "eslint src/scripts/*.js",
     "lint:scripts:fix": "eslint src/scripts/*.js --fix"
   },
-  "keywords": [
-    "webpack",
-    "webpack 5",
-    "webpack boilerplate"
-  ],
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@babel/plugin-proposal-class-properties": "^7.16.0",
@@ -49,8 +44,9 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
-    "@popperjs/core": "^2.11.0",
-    "bootstrap": "^5.1.3",
-    "jquery": "^3.6.0"
+    "popper.js": "^1.16.1",
+    "bootstrap": "~4.5.3",
+    "jquery": "^3.6.0",
+    "tether": "^2.0.0"
   }
 }
