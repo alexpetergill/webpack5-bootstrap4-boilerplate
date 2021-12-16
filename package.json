@@ -1,6 +1,6 @@
 {
   "name": "webpack5-bootstrap4-boilerplate",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Bootstrap 4 + SCSS + Babel + jQuery + Fontawesome",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
     "lint": "npm run lint:styles; npm run lint:scripts",
     "lint:styles": "stylelint src/styles/*.scss",
     "lint:styles:fix": "stylelint src/styles/*.scss --fix",
-    "lint:scripts": "eslint . src/scripts/*.js config || true",
-    "lint:scripts:fix": "eslint . src/scripts/*.js config || true --fix"
+    "lint:scripts": "eslint src/scripts/*.js",
+    "lint:scripts:fix": "eslint src/scripts/*.js --fix"
   },
   "keywords": [
     "webpack",
@@ -29,10 +29,8 @@
     "css-minimizer-webpack-plugin": "^3.2.0",
     "eslint": "^8.4.1",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-webpack": "^0.13.2",
     "eslint-plugin-import": "^2.25.3",
-    "eslint-plugin-prettier": "^4.0.0",
     "eslint-webpack-plugin": "^3.1.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.5",

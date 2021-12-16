@@ -4,12 +4,13 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const paths = require('./paths')
+const { templates } = require('./templates')
 
 module.exports = {
   entry: [paths.src + '/index.js'],
   output: {
     path: paths.build,
-    filename: '[name].js',
+    filename: '[name].bundle.js',
     publicPath: '/',
     assetModuleFilename: 'src/images/[name].[ext]'
   },
@@ -23,9 +24,7 @@ module.exports = {
         },
       ],
     }),
-    new HtmlWebpackPlugin({
-      template: paths.src + '/index.html',
-    }),
+    ...templates.map((template) => new HtmlWebpackPlugin(template)),
     new ESLintPlugin({
       files: ['src/scripts/*.js'],
     }),

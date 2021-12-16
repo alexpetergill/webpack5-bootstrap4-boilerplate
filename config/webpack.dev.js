@@ -7,7 +7,7 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',
   devServer: {
-    watchFiles: ["./src/**/*"],
+    watchFiles: ['./src/**/*'],
     historyApiFallback: true,
     open: true,
     compress: true,
