@@ -9,14 +9,15 @@ const { templates } = require('./templates')
 module.exports = {
   entry: [
     'tether',
-    paths.src + '/index.js'
+    paths.src + '/index.js',
   ],
   output: {
     path: paths.build,
     filename: '[name].bundle.js',
     publicPath: '/',
-    assetModuleFilename: 'src/images/[name].[ext]'
+    assetModuleFilename: 'images/[name].[ext]',
   },
+  target: ['web', 'es5'],
   plugins: [
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
@@ -24,7 +25,7 @@ module.exports = {
         {
           from: paths.src + '/images',
           to: 'images',
-          noErrorOnMissing: true
+          noErrorOnMissing: true,
         },
       ],
     }),
@@ -40,7 +41,6 @@ module.exports = {
       Tether: 'tether',
       'window.Tether': 'tether',
       Popper: ['popper.js', 'default'],
-      'window.Tether': 'tether',
       Alert: 'exports-loader?Alert!bootstrap/js/dist/alert',
       Button: 'exports-loader?Button!bootstrap/js/dist/button',
       Carousel: 'exports-loader?Carousel!bootstrap/js/dist/carousel',
@@ -50,14 +50,14 @@ module.exports = {
       Popover: 'exports-loader?Popover!bootstrap/js/dist/popover',
       Scrollspy: 'exports-loader?Scrollspy!bootstrap/js/dist/scrollspy',
       Tab: 'exports-loader?Tab!bootstrap/js/dist/tab',
-      Tooltip: "exports-loader?Tooltip!bootstrap/js/dist/tooltip",
-      Util: 'exports-loader?Util!bootstrap/js/dist/util'
+      Tooltip: 'exports-loader?Tooltip!bootstrap/js/dist/tooltip',
+      Util: 'exports-loader?Util!bootstrap/js/dist/util',
     }),
   ],
   module: {
     rules: [
       { test: /\.js$/, use: ['babel-loader'] },
-      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/resource' },
+      { test: /\.(?:ico|gif|png|jpg|jpeg)$/i, type: 'asset/inline' },
       { test: /\.(woff(2)?|eot|ttf|otf|svg|)$/, type: 'asset/inline' },
     ],
   },

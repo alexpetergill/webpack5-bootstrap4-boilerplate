@@ -7,6 +7,12 @@
     }
   ],
   "rules": {
-    "at-rule-no-unknown": false
+    "at-rule-no-unknown": null,
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null,
+    "selector-type-no-unknown": null,
+    "selector-pseudo-element-no-unknown": null,
+    "selector-pseudo-class-no-unknown": null,
+    "color-function-notation": null
   }
 }
